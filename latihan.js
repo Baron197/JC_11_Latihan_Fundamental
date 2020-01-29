@@ -304,42 +304,152 @@
 // })
 
 
-var conn = {
-    host: 'localhost'
-}
+// var conn = {
+//     host: 'localhost'
+// }
 
-conn.query('Select * from products', (err,results) => {
-    if(err) {
-        return res.status(500).send(err)
-    }
-    conn.query('Select * from users', (err,results1) => {
-        if(err) {
-            return res.status(500).send(err)
-        }
+// conn.query('Select * from products', (err,results) => {
+//     if(err) {
+//         return res.status(500).send(err)
+//     }
+//     conn.query('Select * from users', (err,results1) => {
+//         if(err) {
+//             return res.status(500).send(err)
+//         }
     
-        res.status(200).send(results1)
-        conn.query('Select * from users', (err,results1) => {
-            if(err) {
-                return res.status(500).send(err)
-            }
+//         res.status(200).send(results1)
+//         conn.query('Select * from users', (err,results1) => {
+//             if(err) {
+//                 return res.status(500).send(err)
+//             }
         
-            res.status(200).send(results1)
-            conn.query('Select * from users', (err,results1) => {
-                if(err) {
-                    return res.status(500).send(err)
-                }
+//             res.status(200).send(results1)
+//             conn.query('Select * from users', (err,results1) => {
+//                 if(err) {
+//                     return res.status(500).send(err)
+//                 }
             
-                res.status(200).send(results1)
-            })
-        })
-    })
-})
+//                 res.status(200).send(results1)
+//             })
+//         })
+//     })
+// })
 
 
 // var contoh = [1,2];
 // if(contoh) {
 //     console.log('hello')
 // }
+
+var mySetTimeout = (cbfn,time) => {
+    for(var i = 0; i < time * 1000000; i++) {
+
+    }
+    cbfn()
+}
+
+// mySetTimeout(() => console.log('hello'),2000)
+// console.log('test')
+
+// var mySetInterval = (cbfn,time) => {
+//     for(var i = 0;; i++) {
+//         if(i % (time * 100000) === 0) {
+//             cbfn()
+//         }
+//     }
+// }
+
+// mySetInterval(() => console.log('Hello'), 3000)
+
+import Header from 'Header';
+
+const App = () => {
+    return (
+        <div>
+            <h1>Selamat Datang di</h1>
+            <Header><h1>Purwadhika</h1></Header>
+            <Header><h2>BSD</h2></Header>
+            <Header headerText="Semarang" />
+            <Header headerText="Sunter" />
+        </div>
+    )
+}
+
+import React from 'react'
+
+class Header extends React.Component {
+    state = { text: 'Hello' }
+    render() {
+        return (
+            <div>
+                <h1>{this.state.coba}</h1>
+            </div>
+        )
+    }
+}
+
+class Carousel extends React.Component {
+    state = { coba: 'Apa Kabar'}
+    render() {
+        return (
+            <div>
+                <Header coba={this.state.coba} />
+            </div>
+        )
+    }
+}
+
+
+
+// var manusia1 = {
+//     nama: 'Andi',
+//     usia: 30,
+//     kelamin: 'Pria',
+//     berbicara: () => {
+//         console.log('Saya namanya Andi, senang berkenalan dengan Anda!')
+//     },
+//     pendidikan: {
+//         sd: 'Menteng',
+//         smp: 'Kelapa Gading',
+//         sma: 'BSD',
+//         s1: 'Purwadhika'
+//     }
+// }
+
+// var { sd,smp,sma,s1 } = manusia1.pendidikan
+
+// console.log(sd)
+// console.log(smp)
+// console.log(sma)
+// console.log(s1)
+
+// var manusia1 = {
+//     nama: 'Andi',
+//     usia: 30,
+//     kelamin: 'Pria'
+// }
+
+// var manusia1detail = {
+//     ...manusia1,
+//     berbicara: () => {
+//         console.log('Nama saya Andi')
+//     },
+//     pendidikan: {
+//         sd: 'Menteng'
+//     }
+// }
+
+// var arr1 = [1,2,3]
+// var arr2 = [arr1,4,5,6]
+// var arr3 = [...arr1,4,5,6]
+
+// console.log(arr2)
+// console.log(arr3)
+
+
+
+
+
 
 
 
