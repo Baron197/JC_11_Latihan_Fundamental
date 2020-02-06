@@ -341,12 +341,12 @@
 //     console.log('hello')
 // }
 
-var mySetTimeout = (cbfn,time) => {
-    for(var i = 0; i < time * 1000000; i++) {
+// var mySetTimeout = (cbfn,time) => {
+//     for(var i = 0; i < time * 1000000; i++) {
 
-    }
-    cbfn()
-}
+//     }
+//     cbfn()
+// }
 
 // mySetTimeout(() => console.log('hello'),2000)
 // console.log('test')
@@ -361,43 +361,43 @@ var mySetTimeout = (cbfn,time) => {
 
 // mySetInterval(() => console.log('Hello'), 3000)
 
-import Header from 'Header';
+// import Header from 'Header';
 
-const App = () => {
-    return (
-        <div>
-            <h1>Selamat Datang di</h1>
-            <Header><h1>Purwadhika</h1></Header>
-            <Header><h2>BSD</h2></Header>
-            <Header headerText="Semarang" />
-            <Header headerText="Sunter" />
-        </div>
-    )
-}
+// const App = () => {
+//     return (
+//         <div>
+//             <h1>Selamat Datang di</h1>
+//             <Header><h1>Purwadhika</h1></Header>
+//             <Header><h2>BSD</h2></Header>
+//             <Header headerText="Semarang" />
+//             <Header headerText="Sunter" />
+//         </div>
+//     )
+// }
 
-import React from 'react'
+// import React from 'react'
 
-class Header extends React.Component {
-    state = { text: 'Hello' }
-    render() {
-        return (
-            <div>
-                <h1>{this.state.coba}</h1>
-            </div>
-        )
-    }
-}
+// class Header extends React.Component {
+//     state = { text: 'Hello' }
+//     render() {
+//         return (
+//             <div>
+//                 <h1>{this.props.coba}</h1>
+//             </div>
+//         )
+//     }
+// }
 
-class Carousel extends React.Component {
-    state = { coba: 'Apa Kabar'}
-    render() {
-        return (
-            <div>
-                <Header coba={this.state.coba} />
-            </div>
-        )
-    }
-}
+// class Carousel extends React.Component {
+//     state = { coba: 'Apa Kabar'}
+//     render() {
+//         return (
+//             <div>
+//                 <Header coba={this.state.coba} />
+//             </div>
+//         )
+//     }
+// }
 
 
 
@@ -445,6 +445,12 @@ class Carousel extends React.Component {
 
 // console.log(arr2)
 // console.log(arr3)
+
+var test = function() {
+    console.log('hello')
+}
+test()
+
 
 
 
